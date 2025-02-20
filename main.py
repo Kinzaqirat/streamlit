@@ -3,7 +3,7 @@ import pandas as pd
 import os
 import openpyxl
 from io import BytesIO
-# print(openpyxl.__version__)
+print(openpyxl.__version__)
 st.set_page_config(page_title="Data sweeper",layout="centered")
 
 # custom css
