@@ -1,8 +1,9 @@
 import streamlit as st
 import pandas as pd
 import os
+import openpyxl
 from io import BytesIO
-
+print(openpyxl.__version__)
 st.set_page_config(page_title="Data sweeper",layout="centered")
 
 # custom css
@@ -32,7 +33,7 @@ if file_uploader:
         if file_ext==".csv":
             df=pd.read_csv(file)
         elif file_ext==".xlsx":
-            df = pd.read_excel(file, engine="openpyxl")
+            df = pd.read_excel("your_file.xlsx", engine="openpyxl")
         else:
             st.error(f"unsupported file type: {file_ext}")
             continue        
